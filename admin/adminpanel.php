@@ -110,8 +110,12 @@
                   <td><?php echo $row['telefonocliente']; ?></td>
                   <td>
                     <a title="eliminar usuario/cliente" href="delete.php?id=<?php echo $row['idcliente'] ?>" class="btn btn-danger">
-                      <i class="fa-solid fa-user-slash"></i>
+                        <i class="fa-solid fa-user-slash"></i>
                     </a>
+                    <a title="actualizar usuario" href="actualizar.php?id=<?php echo $row['idcliente']?>" class="btn btn-secondary">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    
                   </td>
                 </tr>
               <?php } ?>

@@ -45,6 +45,19 @@
     margin-left: 25%;
     font-size: 15px;
   }
+  .salir{
+/*     border: 1px solid red;*/
+    margin: 7px;
+    padding: 5px;
+    background: firebrick;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .salir:hover{
+    color: black;
+    text-decoration: none;
+  }
 </style>
 
 <body>

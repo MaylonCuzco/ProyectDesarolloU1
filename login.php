@@ -17,7 +17,7 @@ if ($con) {
 } else {
 ?>
   <?php
-  include("login.html");
+  require_once 'login.html';
 
   ?>
   <!DOCTYPE html>

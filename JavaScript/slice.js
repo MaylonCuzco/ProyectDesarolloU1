@@ -31,7 +31,7 @@ class SliceCatal extends HTMLElement {
         margin: 15px;
     }
     .catalogo{
-        border: 2px solid black;
+        /* border: 2px solid black; */
         text-align: center;  
         padding-left: 10%;
         padding-right: 10%;
@@ -161,7 +161,7 @@ class SliceComSoon extends HTMLElement{
         margin: 15px;
     }
     .catalogo{
-        border: 2px solid black;
+        /* border: 2px solid black; */
         text-align: center;  
         padding-left: 10%;
         padding-right: 10%;

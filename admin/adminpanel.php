@@ -58,7 +58,7 @@
         <tbody>
 
           <?php
-          $query = "SELECT * FROM `streaming.cliente`";
+          $query = "SELECT * FROM `cliente`";
           $result = mysqli_query($conn, $query);    
 
           while($row = mysqli_fetch_assoc($result)) { ?>

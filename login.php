@@ -9,15 +9,22 @@ $contraseña = $_POST['Contraseña'];
 //Creación de la conexión
 $conexion = mysqli_connect("localhost", "root", "", "grupo6_playbbem");
 
-$consulta = "SELECT * FROM `streaming.cliente` where nombreusuario='$usuario' and clavecliente='$contraseña'";
+$consulta = "SELECT * FROM `cliente` where nombreusuario='$usuario' and clavecliente='$contraseña'";
+$consulta2 = "SELECT * FROM `administrador` where admin_usuario='$usuario' and contrasena_admin='$contraseña'";
+
 $resultado = mysqli_query($conexion, $consulta);
+$resultado2 = mysqli_query($conexion, $consulta2);
 
 $con = mysqli_num_rows($resultado);
+$con2 = mysqli_num_rows($resultado2);
 
 if ($con) {
 
-  header("location:catalogo.html");
+  header("location:catalogo.php");
+} else if ($con2) {
+  header("location: admin/adminpanel.php");
 } else {
+
 ?>
   <?php
   include("login.html");
@@ -35,7 +42,7 @@ if ($con) {
   </head>
 
   <body>
-  <template id="mensaje">
+    <template id="mensaje">
       <style>
         .error {
           width: 500px;
@@ -43,14 +50,16 @@ if ($con) {
           margin-top: 10px;
           margin-left: 450px;
           display: grid;
-          grid-template-columns:1fr 4fr;
-          border:3px solid #000000;
+          grid-template-columns: 1fr 4fr;
+          border: 3px solid #000000;
         }
-        .derecha{
+
+        .derecha {
           font-size: 20px;
-          color:#000000;
+          color: #000000;
         }
-        b{
+
+        b {
           font-size: 35px;
         }
       </style>
@@ -62,7 +71,7 @@ if ($con) {
           Error, no se ha podido conectar con el servidor
           <p></p>
           <b>Ingrese datos validos</b>
-          <br> 
+          <br>
 
         </div>
       </div>
@@ -76,5 +85,6 @@ if ($con) {
 <?php
 }
 mysqli_free_result($resultado);
+mysqli_free_result($resultado2);
 mysqli_close($conexion);
 ?>

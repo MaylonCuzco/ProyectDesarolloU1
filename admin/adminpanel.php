@@ -70,7 +70,7 @@
             <td><?php echo $row['correo_ecliente']; ?></td>
             <td><?php echo $row['telefonocliente']; ?></td>
             <td>
-              <a title="eliminar usuario/cliente"  href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+              <a title="eliminar usuario/cliente"  href="delete.php?id=<?php echo $row['idcliente']?>" class="btn btn-danger">
               <i class="fa-solid fa-user-slash"></i>
               </a>
             </td>

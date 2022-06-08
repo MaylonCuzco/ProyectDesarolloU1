@@ -10,7 +10,7 @@ $conn = new mysqli(SERVERNAME,USERNAME,PASSWORD,DBNAME);
 
 //Cotrolar la conexion
 if($conn->connect_error){
-    die('Coenxion fallida'.$conn -> connect_error);
+    die('Conexion fallida'.$conn -> connect_error);
 }else{
     //echo('Conexion exitosa');
 }

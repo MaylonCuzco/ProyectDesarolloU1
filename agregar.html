@@ -6,18 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar usuario</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="css/agregarCSS.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <style>
-        label {
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <body>
-
     <div class="container">
         <div class="inicio p-4 mt-5 mb-5">
             <div class="row">
@@ -26,6 +20,7 @@
                     <p>Llene este formulario para agregar un usuario al sistema.</p>
                 </div>
             </div>
+
             <form action="agregar.php" method="post" enctype="multipart/form-data">
                 <div class="row justify-content-center">
                     <div class="col col-12 col-md-7">
@@ -35,10 +30,10 @@
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Apellido" name="apellido" require>
                         </div>
-                       
+
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Genero"name="genero" require>
-                        </div> 
+                            <input type="text" class="form-control" placeholder="Genero" name="genero" require>
+                        </div>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Cedula" name="cedula" require>
                         </div>
@@ -49,22 +44,23 @@
                             <input type="text" class="form-control" placeholder="Dirección" name="direccion" require>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Correo: ejmp@ejemplo.com"name="correo" require>
+                            <input type="text" class="form-control" placeholder="Correo: ejmp@ejemplo.com" name="correo" require>
                         </div>
-                        
+
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="nombre usuario"name="usuario" require>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Ingrese contraseña"name="contraseña" require>
+                            <input type="text" class="form-control" placeholder="nombre usuario" name="usuario" require>
                         </div>
                         <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Ingrese contraseña" name="contraseña" require>
+                        </div>
+                        <!-- <div class="form-group">
                             <label>Foto</label><br>
-                            <input type="file" name="imagen">
-                        </div>
+                            <input type="file" name="imagen" id="imagen">
+                        </div> -->
+
                         <div class="text-center">
                             <input type="submit" value="Agregar" class="btn btn-success enviar">
-                            <a href="index.php" class="btn btn-primary enviar">Cancelar</a>
+                            <a href="login.php" class="btn btn-primary enviar">Cancelar</a>
                         </div>
                     </div>
                 </div>

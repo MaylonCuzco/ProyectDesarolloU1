@@ -7,7 +7,7 @@ class SliderCatalogo extends HTMLElement{
         this.innerHTML=
         `<div class="imagenslider">
             <ul>
-                <li><img src="img/slider1.png"></li>
+                <li><img src="img/slider1.jpg"></li>
                 <li><img src="img/slider2.jpg"></li>
                 <li><img src="img/slider3.jpg"></li>
             </ul>

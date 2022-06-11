@@ -1,8 +1,11 @@
 <?php
 session_start();
+$usuario = '';
+$contraseña ='';
+if (isset($_POST['Usuario']) && isset($_POST['Contraseña'])){
 $usuario = $_POST['Usuario'];
 $contraseña = $_POST['Contraseña'];
-
+}
 //Creación de la conexión
 $conexion = mysqli_connect("localhost", "root", "", "grupo6_playbbem");
 

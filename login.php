@@ -1,10 +1,20 @@
 <?php
 session_start();
+<<<<<<< HEAD
+=======
+$_SESSION["usuario"] ='';
+>>>>>>> steeven_engracia
 $usuario = '';
 $contraseña ='';
 if (isset($_POST['Usuario']) && isset($_POST['Contraseña'])){
 $usuario = $_POST['Usuario'];
 $contraseña = $_POST['Contraseña'];
+<<<<<<< HEAD
+=======
+
+$_SESSION["usuario"] =$usuario;
+
+>>>>>>> steeven_engracia
 }
 //Creación de la conexión
 $conexion = mysqli_connect("localhost", "root", "", "grupo6_playbbem");
@@ -87,4 +97,5 @@ if ($con) {
 mysqli_free_result($resultado);
 mysqli_free_result($resultado2);
 mysqli_close($conexion);
+
 ?>

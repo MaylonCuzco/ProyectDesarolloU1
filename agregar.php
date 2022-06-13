@@ -14,15 +14,12 @@
         $genero = $_POST['genero'];
         $usuario = $_POST['usuario'];
         $contraseña = $_POST['contraseña'];
-<<<<<<< HEAD
 /*         $img = $_FILES['imagen']['name'];
       $folder = 'img'; 
         $imagen = addslashes(file_get_contents($img)); */
-=======
         /* $img = $_FILES['imagen']['name'];
         $folder = 'img'; 
         $imagen = file_get_contents($folder/$img); */
->>>>>>> 71bb9cd (ultimos cambios)
 
         // Verificar si se estan enviando todos los datos
         if (isset($nombre) && !empty(trim($nombre)) && isset($apellido) && !empty(trim($apellido)) && isset($cedula) && !empty(trim($cedula)) && isset($telefono) && !empty(trim($telefono)) && isset($direccion) && !empty(trim($direccion)) && isset($correo) && !empty(trim($correo))&& isset($genero) && !empty(trim($genero)) && isset($usuario) && !empty(trim($usuario))&& isset($contraseña) && !empty(trim($contraseña)) /* && isset($imagen) && !empty(trim($imagen)) */) {

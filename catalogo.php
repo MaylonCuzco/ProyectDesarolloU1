@@ -22,8 +22,8 @@ $usuario= $_SESSION["usuario"];
 <ul class="menu">
     <li><a href="catalogo.php">Estrenos</a></li>
     <li><a href="Proximos.php">Próximos Estrenos</a></li>
-    <!-- <li><a href="Factura.php">Factura</a></li>
-    <li><a href="Cuenta.php">Cuenta</a></li> -->
+    <!-- <li><a href="Factura.php">Factura</a></li> -->
+    <li><a href="Cuenta.php">Cuenta</a></li>
     <!-- <li><a href="quienes.html">Quienes Somos</li></a> -->
     <li><a href="catalogo.html">Cerrar Sesión</a></li>
     <li>

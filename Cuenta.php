@@ -1,49 +1,41 @@
 <?php
+//Requerismos la conexion 
 require_once 'conexion.php';
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leer datos</title>
-    <link rel="stylesheet" href="css/leerS.css">
-    <style>
-        label{
-            font-weight:600;
+/* Validar si se envian los datos por el metodo get(URL) */
+if(isset($_GET['id']) && !empty(trim($_GET['id']))){
+    /* Contruyo la contulata */
+    $query='SELECT * FROM cliente WHERE idcliente=?';
+    /* Preparar la sentencia */
+    if($stmt=$conn->prepare($query)){
+        $stmt->bind_param('i', $_GET['id']);
+        /* ejecuto la sentencia */
+        if($stmt->execute()){
+            $result=$stmt->get_result();
+            /* veo que si el numero de filas es igual a uno */
+            if($result->num_rows==1){
+                /* obtenemos todos lo datos que estamo consultando */
+                $row=$result->fetch_array
+                    (MYSQLI_ASSOC);
+                    $nombre = $row['nombrecliente'];
+                    $apellido = $row['apellidocliente'];
+                    $cedula = $row['cedulacliente'];
+                    $telefono = $row['telefonocliente'];
+                    $direccion = $row['direccioncliente'];
+                    $correo = $row['correocliente'];
+                    /* $imagen = $row['imagenusuario'];   */            
+            }else{
+                echo 'Error! No existen resultados';
+                exit();
+            }
+        }else{
+            echo 'ERROR! Revise la conexion con la base de datos :/';
+            exit();
         }
-    </style>
-</head>
-<body>
-    <h1 class="titulo">Datos del cliente</h1>
-    <div id="muestra">
-        <div>
-            <label for="">Nombre :</label>
-            <p><?php echo $nombre." ".$apellido ?></p>
-        </div>
-        <div>
-            <label for="">Cedula: </label>
-            <p><?php echo $cedula ?></p>
-        </div>
-        <div>
-            <label> Direccion</label>
-            <p><?php echo $direccion;?></p>
-        </div>
-        <div>
-            <label> Teléfono</label>
-            <p><?php echo $telefono;?></p>
-        </div>
-        <div>
-            <label for="">Usuario: </label>
-            <p><?php echo $usuario ?></p>
-        </div>
-        <div>
-            <label for="">Correo: </label>
-            <p><?php echo $correo ?></p>
-        </div>
-
-    </div>
-</body>
-</html>
+    }
+    $stmt->close();
+    $conn->close();
+}else{
+    echo 'Error No hay Sistema :(';
+}
+require_once 'Cuenta.html';
+?>

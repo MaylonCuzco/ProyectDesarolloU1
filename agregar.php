@@ -14,17 +14,17 @@
         $genero = $_POST['genero'];
         $usuario = $_POST['usuario'];
         $contraseña = $_POST['contraseña'];
-        /* $img = $_FILES['imagen']['name'];
-        $folder = 'img'; 
-        $imagen = file_get_contents($folder/$img); */
+/*         $img = $_FILES['imagen']['name'];
+      $folder = 'img'; 
+        $imagen = addslashes(file_get_contents($img)); */
 
         // Verificar si se estan enviando todos los datos
-        if (isset($nombre) && !empty(trim($nombre)) && isset($apellido) && !empty(trim($apellido)) && isset($cedula) && !empty(trim($cedula)) && isset($telefono) && !empty(trim($telefono)) && isset($direccion) && !empty(trim($direccion)) && isset($correo) && !empty(trim($correo))&& isset($genero) && !empty(trim($genero)) && isset($usuario) && !empty(trim($usuario))&& isset($contraseña) && !empty(trim($contraseña)) /* && isset($imagen) && !empty(trim($imagen)) */) {
+        if (isset($nombre) && !empty(trim($nombre)) && isset($apellido) && !empty(trim($apellido)) && isset($cedula) && !empty(trim($cedula)) && isset($telefono) && !empty(trim($telefono)) && isset($direccion) && !empty(trim($direccion)) && isset($correo) && !empty(trim($correo))&& isset($genero) && !empty(trim($genero)) && isset($usuario) && !empty(trim($usuario))&& isset($contraseña) && !empty(trim($contraseña))/* && isset($imagen) && !empty(trim($imagen)) */) {
             // Generar la consulta
-            $consulta = "INSERT INTO `cliente`( nombrecliente, apellidocliente, generocliente, cedulacliente, telefonocliente, direccioncliente, correo_ecliente, nombreusuario, clavecliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, )";
+            $consulta = "INSERT INTO `cliente`( nombrecliente, apellidocliente, generocliente, cedulacliente, telefonocliente, direccioncliente, correo_ecliente, nombreusuario, clavecliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
             // Preparar la insercion
             if ($stmt = $conn -> prepare($consulta)) {
-                $stmt -> bind_param('sssssssss', $nombre, $apellido, $genero,$cedula, $telefono, $direccion, $correo,  $usuario, $contraseña);
+                $stmt -> bind_param('sssssssss', $nombre, $apellido, $genero,$cedula, $telefono, $direccion, $correo,  $usuario, $contraseña/* , $imagen */);
                 // Validar si se ejecuta el stmt
                 if ($stmt -> execute()) {
                     header("location: login.php");

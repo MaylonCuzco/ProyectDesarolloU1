@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar usuario</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="css/agregarCSS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inicio p-4 mt-5 mb-5">
+            <div class="row">
+                <div class="col text-center">
+                    <h2>Agregar una pelicula</h2>
+                    <p>Llene este formulario para agregar pelicula al sistema.</p>
+                </div>
+            </div>
+
+            <form action="agregarpel.php" method="post" enctype="multipart/form-data">
+                <div class="row justify-content-center">
+                    <div class="col col-12 col-md-7">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" require>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="precio" name="precio" require>
+                        </div>
+                        <div class="form-group">
+                            <label>Foto</label><br>
+                            <input type="file" name="imagenusuario">
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" value="Agregar" class="btn btn-success enviar">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>

@@ -3,19 +3,15 @@ require_once 'conexion.php';
 
 session_start();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4ce53e5 (Se resuelve conflicto de ramas)
+
+
+
 if( isset($_SESSION["usuario"])){
 
     $usuario= $_SESSION["usuario"];
 }
-<<<<<<< HEAD
-=======
->>>>>>> 989621c (cambios aceptados)
-=======
->>>>>>> 4ce53e5 (Se resuelve conflicto de ramas)
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,44 +28,32 @@ if( isset($_SESSION["usuario"])){
 
 <body>
 <ul class="menu">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <li><a href="catalogo.php">Estrenos</li></a>
-<<<<<<< HEAD
+
     <li><a href="Proximos.php">Próximos Estrenos</li></a>
     <!-- <li><a href="Factura.php">Factura</a></li>
     <li><a href="Cuenta.php">Cuenta</a></li> -->
-=======
+
     <li><a href="Proximos.html">Próximos Estrenos</li></a>
     <!-- <li><a href="Factura.php">Factura</a></li> -->
     <li><a href="Cuenta.php">Cuenta</a></li>
-<<<<<<< HEAD
->>>>>>> cd0311c (se añade un nuevo archivo "Cuenta" en el cual se podra visualizar la informacion del usuario.)
-=======
-=======
-=======
->>>>>>> a5faaaf (actua)
+
     <li><a href="catalogo.php">Estrenos</a></li>
     <li><a href="Proximos.php">Próximos Estrenos</a></li>
-<<<<<<< HEAD
+
     <!-- <li><a href="Factura.php">Factura</a></li>
     <li><a href="Cuenta.php">Cuenta</a></li> -->
-<<<<<<< HEAD
->>>>>>> 4d784a1 (Se rectica ubicación de enlaces)
->>>>>>> 3b4c89e (Se fusiona los cambios)
-=======
->>>>>>> a5faaaf (actua)
-=======
+
+
     <!-- <li><a href="Factura.php">Factura</a></li> -->
     <li><a href="Cuenta.php">Cuenta</a></li>
->>>>>>> 4c10b9e (descomenta un enlace)
-=======
+
     <li><a href="catalogo.php">Estrenos</li></a>
     <li><a href="Proximos.php">Próximos Estrenos</li></a>
     <!-- <li><a href="Factura.php">Factura</a></li>
     <li><a href="Cuenta.php">Cuenta</a></li> -->
->>>>>>> 4ce53e5 (Se resuelve conflicto de ramas)
+
     <!-- <li><a href="quienes.html">Quienes Somos</li></a> -->
     <?php 
         if (isset($usuario)){

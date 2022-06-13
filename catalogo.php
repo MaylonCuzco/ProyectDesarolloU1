@@ -2,7 +2,15 @@
 require_once 'conexion.php';
 
 session_start();
-$usuario= $_SESSION["usuario"];
+
+
+
+
+if( isset($_SESSION["usuario"])){
+
+    $usuario= $_SESSION["usuario"];
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -20,15 +28,52 @@ $usuario= $_SESSION["usuario"];
 
 <body>
 <ul class="menu">
+
+
+    <li><a href="catalogo.php">Estrenos</li></a>
+
+    <li><a href="Proximos.php">Próximos Estrenos</li></a>
+    <!-- <li><a href="Factura.php">Factura</a></li>
+    <li><a href="Cuenta.php">Cuenta</a></li> -->
+
+    <li><a href="Proximos.html">Próximos Estrenos</li></a>
+    <!-- <li><a href="Factura.php">Factura</a></li> -->
+    <li><a href="Cuenta.php">Cuenta</a></li>
+
+    <li><a href="catalogo.php">Estrenos</a></li>
+    <li><a href="Proximos.php">Próximos Estrenos</a></li>
+
+    <!-- <li><a href="Factura.php">Factura</a></li>
+    <li><a href="Cuenta.php">Cuenta</a></li> -->
+
+
+    <!-- <li><a href="Factura.php">Factura</a></li> -->
+    <li><a href="Cuenta.php">Cuenta</a></li>
+
+    <li><a href="catalogo.php">Estrenos</li></a>
+    <li><a href="Proximos.php">Próximos Estrenos</li></a>
+    <!-- <li><a href="Factura.php">Factura</a></li>
+    <li><a href="Cuenta.php">Cuenta</a></li> -->
+
+
     <li><a href="catalogo.php">Estrenos</a></li>
     <li><a href="Proximos.php">Próximos Estrenos</a></li>
     <!-- <li><a href="Factura.php">Factura</a></li> -->
     <li><a href="Cuenta.php">Cuenta</a></li>
+
     <!-- <li><a href="quienes.html">Quienes Somos</li></a> -->
-    <li><a href="catalogo.html">Cerrar Sesión</a></li>
-    <li>
-        <p><?php echo $usuario ?></p>
-    </li>
+    <?php 
+        if (isset($usuario)){
+        echo "<li><a href='usuario/cerrarsesion.php?usu=". "" ."'>Cerrar Sesión</a></li>".
+        "<li> <p>".$usuario."</p> </li>";
+        }else{
+        echo "<li>"."<a href='login.php'>Iniciar Sesión</a> </li>";
+        }
+    
+      
+     
+        
+        ?>
 </ul>
 
 <slider-catal></slider-catal>

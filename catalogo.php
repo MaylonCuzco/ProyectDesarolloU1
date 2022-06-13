@@ -27,9 +27,15 @@ if( isset($_SESSION["usuario"])){
 <body>
 <ul class="menu">
     <li><a href="catalogo.php">Estrenos</li></a>
+<<<<<<< HEAD
     <li><a href="Proximos.php">Próximos Estrenos</li></a>
     <!-- <li><a href="Factura.php">Factura</a></li>
     <li><a href="Cuenta.php">Cuenta</a></li> -->
+=======
+    <li><a href="Proximos.html">Próximos Estrenos</li></a>
+    <!-- <li><a href="Factura.php">Factura</a></li> -->
+    <li><a href="Cuenta.php">Cuenta</a></li>
+>>>>>>> cd0311c (se añade un nuevo archivo "Cuenta" en el cual se podra visualizar la informacion del usuario.)
     <!-- <li><a href="quienes.html">Quienes Somos</li></a> -->
     <?php 
         if (isset($usuario)){

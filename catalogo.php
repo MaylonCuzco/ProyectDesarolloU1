@@ -1,12 +1,9 @@
 <?php
 require_once 'conexion.php';
 
-<<<<<<< HEAD
-=======
 session_start();
 $usuario= $_SESSION["usuario"];
 
->>>>>>> steeven_engracia
 ?>
 <!DOCTYPE html>
 <html lang="en">

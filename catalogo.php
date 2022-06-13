@@ -3,10 +3,13 @@ require_once 'conexion.php';
 
 session_start();
 
+<<<<<<< HEAD
 if( isset($_SESSION["usuario"])){
 
     $usuario= $_SESSION["usuario"];
 }
+=======
+>>>>>>> 989621c (cambios aceptados)
 ?>
 <!DOCTYPE html>
 <html lang="en">

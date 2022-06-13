@@ -20,17 +20,10 @@ $usuario= $_SESSION["usuario"];
 
 <body>
 <ul class="menu">
-<<<<<<< HEAD
-    <li><a href="catalogo.php">Estrenos</li></a>
-    <li><a href="Proximos.html">Próximos Estrenos</li></a>
-    <!-- <li><a href="Factura.php">Factura</a></li> -->
-    <li><a href="Cuenta.php">Cuenta</a></li>
-=======
     <li><a href="catalogo.php">Estrenos</a></li>
     <li><a href="Proximos.php">Próximos Estrenos</a></li>
     <!-- <li><a href="Factura.php">Factura</a></li>
     <li><a href="Cuenta.php">Cuenta</a></li> -->
->>>>>>> 4d784a1 (Se rectica ubicación de enlaces)
     <!-- <li><a href="quienes.html">Quienes Somos</li></a> -->
     <li><a href="catalogo.html">Cerrar Sesión</a></li>
     <li>

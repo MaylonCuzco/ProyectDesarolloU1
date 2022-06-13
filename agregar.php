@@ -27,7 +27,7 @@
         // Verificar si se estan enviando todos los datos
         if (isset($nombre) && !empty(trim($nombre)) && isset($apellido) && !empty(trim($apellido)) && isset($cedula) && !empty(trim($cedula)) && isset($telefono) && !empty(trim($telefono)) && isset($direccion) && !empty(trim($direccion)) && isset($correo) && !empty(trim($correo))&& isset($genero) && !empty(trim($genero)) && isset($usuario) && !empty(trim($usuario))&& isset($contraseña) && !empty(trim($contraseña)) /* && isset($imagen) && !empty(trim($imagen)) */) {
             // Generar la consulta
-            $consulta = "INSERT INTO `cliente`( nombrecliente, apellidocliente, generocliente, cedulacliente, telefonocliente, direccioncliente, correo_ecliente, nombreusuario, clavecliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, )";
+            $consulta = "INSERT INTO `cliente`( nombrecliente, apellidocliente, generocliente, cedulacliente, telefonocliente, direccioncliente, correo_ecliente, nombreusuario, clavecliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
             // Preparar la insercion
             if ($stmt = $conn -> prepare($consulta)) {
                 $stmt -> bind_param('sssssssss', $nombre, $apellido, $genero,$cedula, $telefono, $direccion, $correo,  $usuario, $contraseña);

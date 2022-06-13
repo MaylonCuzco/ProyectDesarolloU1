@@ -45,6 +45,7 @@ if( isset($_SESSION["usuario"])){
 >>>>>>> a5faaaf (actua)
     <li><a href="catalogo.php">Estrenos</a></li>
     <li><a href="Proximos.php">Próximos Estrenos</a></li>
+<<<<<<< HEAD
     <!-- <li><a href="Factura.php">Factura</a></li>
     <li><a href="Cuenta.php">Cuenta</a></li> -->
 <<<<<<< HEAD
@@ -52,6 +53,10 @@ if( isset($_SESSION["usuario"])){
 >>>>>>> 3b4c89e (Se fusiona los cambios)
 =======
 >>>>>>> a5faaaf (actua)
+=======
+    <!-- <li><a href="Factura.php">Factura</a></li> -->
+    <li><a href="Cuenta.php">Cuenta</a></li>
+>>>>>>> 4c10b9e (descomenta un enlace)
     <!-- <li><a href="quienes.html">Quienes Somos</li></a> -->
     <?php 
         if (isset($usuario)){

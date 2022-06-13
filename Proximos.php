@@ -32,11 +32,7 @@ $usuario=$_SESSION["usuario"];
         "<li> <p>".$usuario."</p> </li>";
         }else{
         echo "<li>"."<a href='login.php'>Iniciar Sesión</a> </li>";
-        }
-    
-      
-     
-        
+        }        
         ?>
 
         
